@@ -44,7 +44,9 @@ class MapView extends React.Component<MapProps, MapState> {
   }
 
   componentDidMount() {
-    this.map = createMapElement(this.mapContainer)
+    const map = createMapElement(this.mapContainer)
+
+    this.map = map;
   }
 
   componentWillUnmount() {

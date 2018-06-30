@@ -3,8 +3,8 @@ import styled, { keyframes } from 'styled-components';
 export const Title = styled.h1`
   padding: 10px;
   font-weight: 700;
-  font-size: 1.5em;
-  color: #2f2f2f;
+  font-size: 2rem;
+  color: #4CAF50;
   font-family: Montserrat, sans-serif;
 `;
 
@@ -37,7 +37,7 @@ export const Icon = styled.span`
   position: relative;
 
   > * {
-    background-color: #2f2f2f;
+    background-color: #4CAF50;
   }
 
   :hover {

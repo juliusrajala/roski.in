@@ -3,7 +3,6 @@ import produce from 'immer';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  background: url(assets/images/trianglify.svg) no-repeat center center fixed; 
   background-size: cover;
   height: 100vh;
   min-height: 100%;

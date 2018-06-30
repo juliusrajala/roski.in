@@ -12,7 +12,7 @@ const FooterBar = Bar.extend`
   > a {
     padding: 10px 0;
     :hover {
-      color: #fff;
+      color: #4CAF50;
     }
   }
 
