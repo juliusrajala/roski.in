@@ -19,11 +19,13 @@ export function createMapElement(containerEl: HTMLElement, options: MapBox.Mapbo
 }
 
 function registerClickListeners(map: MapBox.Map) {
+  map.doubleClickZoom.disable();
   map.on('click', event => {
     console.log('Clicked', event);
   })
 
   map.on('dblclick', event => {
+    event.preventDefault();
     console.log('Double-clicked', event);
   })
 }
