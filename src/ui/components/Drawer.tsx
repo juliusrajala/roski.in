@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import {
-  Button,
   Navi,
   IconContainer,
   Icon,
@@ -49,6 +48,13 @@ const CloseIcon = Icon.extend`
   }
 `;
 
+const Recognition = styled.p`
+  font-size: 1rem;
+  color: #4CAF50;
+  padding-left: 10px;
+  padding-top: 20px;
+`
+
 const Drawer: React.SFC<any> = () => (
   <ConfigContext.Consumer>
     {(context) => (
@@ -60,11 +66,14 @@ const Drawer: React.SFC<any> = () => (
           </CloseIcon>
         </IconContainer>
         <Navi>
-          <AppLink path="/">Map</AppLink>
-          <AppLink path="/new">Add a bin</AppLink>
+          <AppLink path="/">Map & bins</AppLink>
           <AppLink path="/about">Motivation</AppLink>
+          <StyledLink href="https://github.com/juliusrajala/roski.in" target="_blank">Source</StyledLink>
           <Divider />
-          <StyledLink href="https://github.com/juliusrajala/bit-of-trivia" target="_blank">Source</StyledLink>
+          <Recognition>Started under the&nbsp;</Recognition>
+          <StyledLink target="_blank" href="https://spiceprogram.org">
+            Spice Program
+          </StyledLink>
         </Navi>
       </SideDrawer>
     ) }

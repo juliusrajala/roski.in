@@ -8,6 +8,11 @@ export const Title = styled.h1`
   font-family: Montserrat, sans-serif;
 `;
 
+export const CardTitle = Title.extend`
+  font-size: 1.5rem;
+`;
+
+
 export const StyledLink = styled.a`
   padding: 10px;
   font-weight: 600;
@@ -42,7 +47,7 @@ export const Icon = styled.span`
 
   :hover {
     > * {
-      background-color: rgba(0,0,0,0.48);
+      background-color: #ffffff;
     }
   }
 `;
@@ -51,7 +56,8 @@ export const Divider = styled.span`
   content: "";
   width: 100%;
   height: 2px;
-  background-color: rgba(0,0,0,0.12);
+  background-color: #4CAF50;
+  opacity: .4;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -65,9 +71,6 @@ export const IconContainer = styled.div`
   margin: 10px;
 `;
 
-export const CardTitle = Title.extend`
-  color: #fff;
-`;
 
 export const Container = styled.section`
   display: flex;

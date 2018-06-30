@@ -1,10 +1,17 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import { StyledLink, Bar, Navi, Title } from 'src/ui/styles';
+import { Bar, CardTitle } from 'src/ui/styles';
 
 const FooterBar = Bar.extend`
-  justify-content: center;
+  background-color: #ffffff;
   align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  z-index: 2;
   > * {
     font-size: 1.3rem;
   }
@@ -23,15 +30,9 @@ const FooterBar = Bar.extend`
   }
 `;
 
-const Recognition = styled.p`
-`;
-
 const Footer = () => (
   <FooterBar>
-    <Recognition>Started under the&nbsp;</Recognition>
-    <StyledLink target="_blank" href="https://spiceprogram.org">
-      Spice Program
-    </StyledLink>
+    <CardTitle>Add a new bin</CardTitle>
   </FooterBar>
 )
 

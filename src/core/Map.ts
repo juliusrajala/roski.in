@@ -13,7 +13,6 @@ export function createMapElement(containerEl: HTMLElement, options: MapBox.Mapbo
   })
 
   registerClickListeners(map);
-  registerTouchListeners(map);
 
   return map;
 }
@@ -30,13 +29,8 @@ function registerClickListeners(map: MapBox.Map) {
   })
 }
 
-function registerTouchListeners(map: MapBox.Map) {
-  map.on('touch', (event) => {
-    console.log('Touched', event);
-  })
-}
 
-export function getGeoLocation() {
+export function getUserLocation() {
   // Mock location to Helsinki
   return { lat: 60.167763, lng: 24.944482 };
 }

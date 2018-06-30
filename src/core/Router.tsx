@@ -53,10 +53,8 @@ class Router extends React.Component<any, RouterState> {
 export const Route = (props: any) => (
     <Consumer>
       {({state, action}: RouterContext) => {
-        console.log('RouteContext is', state);
         let keys = [];
         const re = regexp(props.path, keys)
-        console.log(re, keys);
         if (re.test(state.url)) return (
           <Container>
             <props.component { ...props } />
