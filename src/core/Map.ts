@@ -6,7 +6,7 @@ export function createMapElement(containerEl: HTMLElement, options: MapBox.Mapbo
 
   const map = new MapBox.Map({
     container: containerEl,
-    style: 'mapbox://styles/mapbox/dark-v9',
+    style: 'mapbox://styles/mapbox/light-v9',
     center: [24.944482, 60.167763 ], // Start by centering to Helsinki
     zoom: 12,
     ...options,

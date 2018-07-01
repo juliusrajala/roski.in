@@ -2,26 +2,28 @@ import styled, { keyframes } from 'styled-components';
 
 export const Title = styled.h1`
   padding: 10px;
-  font-weight: 700;
   font-size: 2rem;
-  color: #4CAF50;
-  font-family: Montserrat, sans-serif;
+  color: #0288d1;
+  font-family: Rubik, sans-serif;
+  font-weight: 600;
 `;
 
 export const CardTitle = Title.extend`
+  font-family: Rubik, sans-seriff;
   font-size: 1.5rem;
 `;
 
 
 export const StyledLink = styled.a`
   padding: 10px;
-  font-weight: 600;
   text-decoration: none;
-  color: #2f2f2f;
-  transition: all .2s ease-in-out;
+  color: #ff9800;
+  transition: all .1s ease-in-out;
+  font-family: Roboto Mono, mono;
   cursor: Pointer;
   :hover {
-    color: rgba(0,0,0,0.48);
+    color: #0288d1;
+    text-decoration: underline;
   }
 `;
 
@@ -42,12 +44,12 @@ export const Icon = styled.span`
   position: relative;
 
   > * {
-    background-color: #4CAF50;
+    background-color: #ff9800;
   }
 
   :hover {
     > * {
-      background-color: #ffffff;
+      background-color: #0288d1;
     }
   }
 `;
@@ -56,7 +58,7 @@ export const Divider = styled.span`
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #4CAF50;
+  background-color: #0288d1;
   opacity: .4;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -85,7 +87,7 @@ export const Bar = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: row;
-  font-family: Montserrat, sans-serif;
+  font-family: Rubik, sans-serif;
 `;
 
 export const Navi = styled.div`
@@ -96,7 +98,9 @@ export const Navi = styled.div`
 
 export const BreadText = styled.p`
   padding: 10px;
-  line-height: 1.2;
+  color: #2f2f2f;
+  line-height: 1.3;
+  font-family: Roboto Mono, mono;
 `;
 
 const fadeIn = keyframes`
@@ -116,6 +120,7 @@ const fadeIn = keyframes`
 `;
 
 export const Card = styled.div`
+  margin-top: 60px;
   max-width: 100%;
   line-height: 1.2;
   width: 540px;
@@ -124,7 +129,7 @@ export const Card = styled.div`
   color: #fff;
   display: flex;
   flex-direction: column;
-  font-family: Montserrat, sans-serif;
+  font-family: Rubik, sans-serif;
 `;
 
 export const AlignRight = styled.div`

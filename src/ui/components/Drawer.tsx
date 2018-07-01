@@ -5,7 +5,7 @@ import {
   IconContainer,
   Icon,
   Divider,
-  StyledLink
+  BreadText
 } from 'src/ui/styles';
 import { ConfigContext } from 'src/core/ConfigProvider';
 import { AppLink } from 'src/core/Router';
@@ -21,7 +21,7 @@ const SideDrawer = styled.section`
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   padding: 10px;
   color: #2f2f2f;
-  font-family: Montserrat, sans-serif;
+  font-family: Rubik, sans-serif;
   font-weight: 600;
   transition: .2s all ease-in-out;
   right: ${(props: any) => props.isToggled ? '0px' : '-250px'}
@@ -48,12 +48,17 @@ const CloseIcon = Icon.extend`
   }
 `;
 
-const Recognition = styled.p`
+const Recognition = styled.a`
   font-size: 1rem;
-  color: #4CAF50;
-  padding-left: 10px;
-  padding-top: 20px;
-`
+  font-family: Roboto Mono, mono;
+  text-decoration: none;
+  color: #ff9800;
+  transition: all .1s ease-in-out;
+  :hover {
+    color: #0288d1;
+    text-decoration: underline;
+  }
+`;
 
 const Drawer: React.SFC<any> = () => (
   <ConfigContext.Consumer>
@@ -68,12 +73,12 @@ const Drawer: React.SFC<any> = () => (
         <Navi>
           <AppLink path="/">Map & bins</AppLink>
           <AppLink path="/about">Motivation</AppLink>
-          <StyledLink href="https://github.com/juliusrajala/roski.in" target="_blank">Source</StyledLink>
           <Divider />
-          <Recognition>Started under the&nbsp;</Recognition>
-          <StyledLink target="_blank" href="https://spiceprogram.org">
-            Spice Program
-          </StyledLink>
+          <BreadText>
+            Open source on <Recognition href="https://github.com/juliusrajala/roski.in" target="_blank">Github</Recognition>,
+            thanks to <Recognition target="_blank" href="https://spiceprogram.org">
+            the Spice Program</Recognition>.
+          </BreadText>
         </Navi>
       </SideDrawer>
     ) }

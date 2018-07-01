@@ -3,7 +3,6 @@ import produce from 'immer';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  background-color: #323432;
   height: 100vh;
   min-height: 100%;
   display: flex;

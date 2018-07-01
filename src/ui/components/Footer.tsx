@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Bar, CardTitle } from 'src/ui/styles';
+import styled from 'styled-components';
 
 const FooterBar = Bar.extend`
   background-color: #ffffff;
@@ -19,7 +20,7 @@ const FooterBar = Bar.extend`
   > a {
     padding: 10px 0;
     :hover {
-      color: #4CAF50;
+      color: #0288d1;
     }
   }
 
@@ -30,9 +31,29 @@ const FooterBar = Bar.extend`
   }
 `;
 
+const Button = styled.button`
+  font-size: 1.2rem;
+  color: #ff9800;
+  border: 3px solid #ff9800;
+  border-radius: 3px;
+  background: #ffffff;
+  padding: 10px 20px;
+  font-family: Rubik, sans-serif;
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+  cursor: pointer; 
+
+  :hover {
+    background-color: #ff9800;
+    color: #ffffff;
+  }
+`;
+
 const Footer = () => (
   <FooterBar>
-    <CardTitle>Add a new bin</CardTitle>
+    <CardTitle>
+      <Button>New bin</Button>
+    </CardTitle>
   </FooterBar>
 )
 
